@@ -1,0 +1,46 @@
+name: Build Phar
+
+on: ['push']
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: true
+      matrix:
+        php: [7.4]
+
+    name: Build Phar - PHP ${{ matrix.php }}
+
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Cache dependencies
+      uses: actions/cache@v1
+      with:
+        path: ~/.composer/cache/files
+        key: dependencies-php-${{ matrix.php }}-composer-${{ hashFiles('composer.json') }}
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: ${{ matrix.php }}
+        extensions: mbstring, zip
+        tools: prestissimo
+        coverage: none
+
+    - name: Install Composer dependencies
+      run: composer install --no-interaction --no-suggest
+
+    - name: Build Phar
+      run: php application app:build --build-version ${{ github.sha }}
+
+    - name: Commit Phar file to repository
+      uses: stefanzweifel/git-auto-commit-action@v3.0.0
+      with:
+        branch: master
+        commit_author: Owen Voke <development@voke.dev>
+        commit_message: Build Phar file
