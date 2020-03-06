@@ -13,9 +13,8 @@
         "laravel-zero/framework": "^7.0",
         "laminas/laminas-text": "^2.7",
         "nunomaduro/laravel-console-dusk": "^1.6",
-        "nunomaduro/laravel-console-menu": "^2.3",
-        "padraic/phar-updater": "1.0.6",
-        "ramsey/uuid": "^3.9"
+        "nunomaduro/laravel-console-menu": "^3.0",
+        "padraic/phar-updater": "1.0.6"
     },
     "require-dev": {
         "fzaninotto/faker": "1.4",

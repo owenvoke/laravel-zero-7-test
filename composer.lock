@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2defa9e25d689bcb71e7429365e9ad63",
+    "content-hash": "594ab8c867cc1f8d3b5101e2ae2d849a",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -1555,12 +1555,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-zero/framework.git",
-                "reference": "f5682ce20f6f590c74954f6be74d42ea4876cbfc"
+                "reference": "0c4bf37881221fd3afd9203276901c7bd1bc7410"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-zero/framework/zipball/f5682ce20f6f590c74954f6be74d42ea4876cbfc",
-                "reference": "f5682ce20f6f590c74954f6be74d42ea4876cbfc",
+                "url": "https://api.github.com/repos/laravel-zero/framework/zipball/0c4bf37881221fd3afd9203276901c7bd1bc7410",
+                "reference": "0c4bf37881221fd3afd9203276901c7bd1bc7410",
                 "shasum": ""
             },
             "require": {
@@ -1583,6 +1583,7 @@
                 "nunomaduro/laravel-desktop-notifier": "^2.3",
                 "php": "^7.2.5",
                 "psr/log": "^1.1",
+                "ramsey/uuid": "^3.7",
                 "symfony/console": "^5.0",
                 "symfony/error-handler": "^5.0",
                 "symfony/process": "^5.0",
@@ -1630,7 +1631,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2020-03-05T15:35:56+00:00"
+            "time": "2020-03-06T00:07:48+00:00"
         },
         {
             "name": "laravel/dusk",
@@ -2068,23 +2069,23 @@
         },
         {
             "name": "nunomaduro/laravel-console-menu",
-            "version": "v2.3.0",
+            "version": "v3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nunomaduro/laravel-console-menu.git",
-                "reference": "d5c349f5794c15f338bf2bc13d3a47e7de8e8ca4"
+                "reference": "dae1558868b8723ed3d9bc278b01617edb0dfd34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nunomaduro/laravel-console-menu/zipball/d5c349f5794c15f338bf2bc13d3a47e7de8e8ca4",
-                "reference": "d5c349f5794c15f338bf2bc13d3a47e7de8e8ca4",
+                "url": "https://api.github.com/repos/nunomaduro/laravel-console-menu/zipball/dae1558868b8723ed3d9bc278b01617edb0dfd34",
+                "reference": "dae1558868b8723ed3d9bc278b01617edb0dfd34",
                 "shasum": ""
             },
             "require": {
                 "illuminate/console": "5.6.*|5.7.*|5.8.*|^6.0|^7.0",
                 "illuminate/support": "5.6.*|5.7.*|5.8.*|^6.0|^7.0",
                 "php": "^7.1.3",
-                "php-school/cli-menu": "^3.0"
+                "php-school/cli-menu": "^4.0"
             },
             "type": "library",
             "extra": {
@@ -2120,7 +2121,7 @@
                 "php",
                 "symfony"
             ],
-            "time": "2020-01-15T14:01:23+00:00"
+            "time": "2020-03-06T10:04:44+00:00"
         },
         {
             "name": "nunomaduro/laravel-console-summary",
@@ -2530,34 +2531,37 @@
         },
         {
             "name": "php-school/cli-menu",
-            "version": "3.2.0",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-school/cli-menu.git",
-                "reference": "2b24d576338c5add84c9515a766c6d12337ff2b8"
+                "reference": "8354cc4ca0d36f6b1dcc2d54fafe38157f58d45f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-school/cli-menu/zipball/2b24d576338c5add84c9515a766c6d12337ff2b8",
-                "reference": "2b24d576338c5add84c9515a766c6d12337ff2b8",
+                "url": "https://api.github.com/repos/php-school/cli-menu/zipball/8354cc4ca0d36f6b1dcc2d54fafe38157f58d45f",
+                "reference": "8354cc4ca0d36f6b1dcc2d54fafe38157f58d45f",
                 "shasum": ""
             },
             "require": {
                 "beberlei/assert": "^2.4 | ^3",
                 "ext-posix": "*",
                 "php": ">=7.1",
-                "php-school/terminal": "^0.2"
+                "php-school/terminal": "^0.2.1"
             },
             "require-dev": {
-                "phpstan/phpstan": "^0.11",
-                "phpunit/phpunit": "^7.1",
+                "phpstan/phpstan": "^0.12",
+                "phpunit/phpunit": "^8.0",
                 "squizlabs/php_codesniffer": "^3.2"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "PhpSchool\\CliMenu\\": "src"
-                }
+                },
+                "files": [
+                    "src/Util/ArrayUtils.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2582,7 +2586,7 @@
                 "phpschool",
                 "terminal"
             ],
-            "time": "2019-04-30T14:39:32+00:00"
+            "time": "2020-02-16T13:50:49+00:00"
         },
         {
             "name": "php-school/terminal",
@@ -3723,16 +3727,16 @@
         },
         {
             "name": "voku/portable-ascii",
-            "version": "1.4.8",
+            "version": "1.4.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/portable-ascii.git",
-                "reference": "a3801f5facf187a28cc2cae7b98a540c36406dc4"
+                "reference": "9fd2b224c71448b5f84aef9d499a1428d79776a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/portable-ascii/zipball/a3801f5facf187a28cc2cae7b98a540c36406dc4",
-                "reference": "a3801f5facf187a28cc2cae7b98a540c36406dc4",
+                "url": "https://api.github.com/repos/voku/portable-ascii/zipball/9fd2b224c71448b5f84aef9d499a1428d79776a2",
+                "reference": "9fd2b224c71448b5f84aef9d499a1428d79776a2",
                 "shasum": ""
             },
             "require": {
@@ -3768,7 +3772,7 @@
                 "clean",
                 "php"
             ],
-            "time": "2020-02-06T21:46:48+00:00"
+            "time": "2020-03-06T02:47:42+00:00"
         }
     ],
     "packages-dev": [
