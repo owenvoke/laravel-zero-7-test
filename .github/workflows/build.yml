@@ -35,6 +35,9 @@ jobs:
     - name: Install Composer dependencies
       run: composer install --no-interaction --no-suggest
 
+    - name: Test application
+      run: php application list
+
     - name: Build Phar
       run: php application app:build --build-version ${{ github.sha }}
 
